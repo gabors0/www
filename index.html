@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>gs0</title>
-  <link rel="stylesheet" href="../src/output.css" />
+  <link rel="stylesheet" href="/dist/output.css" />
 
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
@@ -22,10 +22,11 @@
       animation: slidein 0.7s ease-out forwards;
     }
 
-    .shadow {
+    /* 
+    .cool-shadow {
       box-shadow: inset 9px 9px 18px #939393,
-      inset -9px -9px 18px #c7c7c7;
-    }
+      inset -9px -9px 18px #c7c7c7 !important ;
+    } */
 
     h1 {
       font-family: "IBM Plex Mono", monospace;
@@ -81,7 +82,7 @@
 
   <div class="flex justify-center items-center h-full">
     <div id="card"
-      class="lg:w-[40%] lg:h-fit w-full h-full p-12 shadow lg:rounded-2xl outline-0 outline-neutral-800 transition-transform duration-150">
+      class="lg:w-[40%] lg:h-fit w-full h-full lg:cool-shadow p-12 lg:rounded-2xl outline-0 outline-neutral-800 transition-transform duration-150">
       <!--titles-->
       <div class="flex flex-row justify-between mb-6">
         <div>
@@ -105,7 +106,7 @@
               </a>
             </div>
             <div>
-              <a href="https://www.paypal.com/paypalme/s5underscore5" target="_blank" title="now"
+              <a href="https://www.paypal.com/paypalme/s5underscore5" target="_blank" title="🐈"
                 class="hover:underline transition-transform duration-150">give me money</a>
             </div>
           </div>
