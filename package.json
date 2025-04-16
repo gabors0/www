@@ -1,4 +1,6 @@
 {
+  "name": "portfolio",
+  "homepage": "https://gs0.me",
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.3",
     "tailwindcss": "^4.1.3",

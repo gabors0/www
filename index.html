@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>gs0</title>
+  <title>about</title>
   <link rel="stylesheet" href="/dist/output.css" />
 
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -22,7 +22,28 @@
     }
 
     #card {
-      animation: slidein 0.7s ease-out forwards;
+      animation: slidein 0.4s ease-out forwards;
+    }
+    
+    .content {
+      @media (width >= 64rem) {
+        opacity: 0;
+        animation: slidein 0.7s ease-out forwards;
+        animation-delay: 0.4s;
+      }
+    }
+
+    .project {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2px;
+      user-select: none;
+    }
+    .project:hover {
+      text-decoration: underline;
+      cursor: pointer;
+      background: rgba(0,0,0,0.3);
     }
 
     h1 {
@@ -50,38 +71,24 @@
         opacity: 1;
       }
     }
-
-    @keyframes gradient {
-      0% {
-        background-position: 0% 50%;
-      }
-
-      50% {
-        background-position: 100% 50%;
-      }
-
-      100% {
-        background-position: 0% 50%;
-      }
-    }
   </style>
 </head>
 
 <body class="text-black h-screen relative">
 
-  <div class="absolute bottom-0 right-0 m-3 mb-6 hidden lg:block select-none">
+  <div class="absolute bottom-0 right-0 z-[999] hidden m-3 mb-6 items-end lg:flex select-none">
     <input type="checkbox" name="firefoxMode" id="firefoxMode" class="hidden">
-    <label for="firefoxMode" class="cursor-pointer p-3 hover:outline outline-neutral-800 rounded-md">
-      <i id="firefoxModeBtn" class="opacity-0 hidden mr-1 fa-solid fa-check transition duration-150"></i>
+    <label for="firefoxMode" title="since the gradients look bad" class="cursor-pointer p-3 hover:outline rounded-md">
+      <span id="firefoxModeBtn" class="hidden opacity-0 mr-1 fa-solid fa-check transition duration-150"></span>
       firefox mode
     </label>
   </div>
 
   <div class="flex justify-center items-center h-full">
     <div id="card"
-      class="lg:w-[40%] lg:h-fit w-full h-full lg:cool-shadow p-12 lg:rounded-2xl outline-0 outline-neutral-800 transition-transform duration-150">
+      class="lg:w-[70%] lg:h-fit w-full h-full lg:cool-shadow p-12 lg:rounded-2xl outline-0 transition-transform duration-150">
       <!--titles-->
-      <div class="flex flex-row justify-between mb-6">
+      <div class="content flex flex-row justify-between mb-6">
         <div>
           <h1 class="text-3xl mb-1">gabors0</h1>
           <i class="text-sm">Gábor Simon</i>
@@ -91,15 +98,15 @@
           <div class="flex flex-col items-end space-y-1">
             <div>
               <a href="https://github.com/gabors0" target="_blank" aria-label="gitHub" title="github" class="pb-1">
-                <i class="fa-brands fa-github fa-xl hover:-translate-y-1 transition-transform duration-150"></i>
+                <span class="fa-brands fa-github fa-xl hover:-translate-y-1 transition-transform duration-150"></span>
               </a>
               <a href="https://x.com/s5underscore5" target="_blank" aria-label="X (Twitter)" title="X (Twitter)"
                 class="pb-1">
-                <i class="fa-brands fa-x-twitter fa-xl hover:-translate-y-1 transition-transform duration-150"></i>
+                <span class="fa-brands fa-x-twitter fa-xl hover:-translate-y-1 transition-transform duration-150"></span>
               </a>
               <a href="https://www.last.fm/user/gabors0" target="_blank" aria-label="last.fm" title="last.fm"
                 class="pb-1">
-                <i class="fa-brands fa-lastfm fa-xl hover:-translate-y-1 transition-transform duration-150"></i>
+                <span class="fa-brands fa-lastfm fa-xl hover:-translate-y-1 transition-transform duration-150"></span>
               </a>
             </div>
             <div>
@@ -110,20 +117,25 @@
         </div>
       </div>
 
-      <hr />
+      <hr class="content" />
 
-      <div class="mt-6">
+      <!--content-->
+      <div class="content mt-6">
         <h2 class="text-xl">About</h2>
-        <ul class="pl-6 pt-3  list-disc">
+        <ul class="pl-6 pt-3 list-disc">
           <li>17</li>
           <li>hungarian 🇭🇺</li>
           <li><del>vibe coder</del></li>
         </ul>
       </div>
 
-      <div class="mt-6">
+      <div class="content mt-6">
         <h2 class="text-xl">Projects</h2>
-        <p class="pl-3 pt-3">uhh...</p>
+        <ul class="pt-3">
+          <a class="project not-lg:underline" href="https://github.com/gabors0/www" target="_blank">this<i>html</i></a>
+          <a class="project not-lg:underline" href="https://github.com/gabors0/video-upload-thing" target="_blank">video upload thing<i>js, html</i></a>
+          <p class="select-none">uhh...</p>
+        </ul>
       </div>
     </div>
   </div>
@@ -145,7 +157,7 @@
         body.classList.remove("gradient");
         body.classList.add("text-white");
 
-        card.classList.remove("outline-neutral-800");
+        card.classList.remove("outline");
         card.classList.remove("lg:cool-shadow");
         card.classList.add("outline-neutral-200");
         card.classList.add("outline-2");
@@ -159,7 +171,7 @@
         body.classList.add("gradient");
         body.classList.remove("text-white");
 
-        card.classList.add("outline-neutral-800");
+        card.classList.add("outline");
         card.classList.add("lg:cool-shadow");
         card.classList.remove("outline-neutral-200");
         card.classList.remove("outline-2");
