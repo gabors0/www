@@ -7,6 +7,11 @@
   <title>gs0</title>
   <link rel="stylesheet" href="/dist/output.css" />
 
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
     @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,500;1,500&display=swap");
@@ -14,19 +19,11 @@
     body {
       font-family: "Sora", system-ui, -apple-system, 'Segoe UI', Ubuntu, Cantarell, 'Open Sans', sans-serif;
       background: linear-gradient(180deg, rgba(196, 196, 196, 1) 0%, rgba(150, 150, 150, 1) 100%);
-      /* background-size: 400% 400%; */
-      /* animation: gradient 10s ease infinite; */
     }
 
     #card {
       animation: slidein 0.7s ease-out forwards;
     }
-
-    /* 
-    .cool-shadow {
-      box-shadow: inset 9px 9px 18px #939393,
-      inset -9px -9px 18px #c7c7c7 !important ;
-    } */
 
     h1 {
       font-family: "IBM Plex Mono", monospace;
@@ -149,7 +146,7 @@
         body.classList.add("text-white");
 
         card.classList.remove("outline-neutral-800");
-        card.classList.remove("shadow");
+        card.classList.remove("lg:cool-shadow");
         card.classList.add("outline-neutral-200");
         card.classList.add("outline-2");
 
@@ -163,7 +160,7 @@
         body.classList.remove("text-white");
 
         card.classList.add("outline-neutral-800");
-        card.classList.add("shadow");
+        card.classList.add("lg:cool-shadow");
         card.classList.remove("outline-neutral-200");
         card.classList.remove("outline-2");
 
