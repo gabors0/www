@@ -1,185 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>about</title>
+    <link rel="stylesheet" href="/src/output.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>about</title>
-  <link rel="stylesheet" href="/dist/output.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
 
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-  <link rel="manifest" href="favicon/site.webmanifest">
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,500;1,500&display=swap");
 
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
-    @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,500;1,500&display=swap");
+      /* colors
+    #05120E darker
+    #081B0B
+    #12301A
+    #163D22
+    #275534 lighter
+    #BFD9C6 text
+    */
 
-    body {
-      font-family: "Sora", system-ui, -apple-system, 'Segoe UI', Ubuntu, Cantarell, 'Open Sans', sans-serif;
-      background: linear-gradient(180deg, rgba(196, 196, 196, 1) 0%, rgba(150, 150, 150, 1) 100%);
-    }
-
-    #card {
-      animation: slidein 0.4s ease-out forwards;
-    }
-    
-    .content {
-      @media (width >= 64rem) {
-        opacity: 0;
-        animation: slidein 0.7s ease-out forwards;
-        animation-delay: 0.4s;
-      }
-    }
-
-    .project {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 2px;
-      user-select: none;
-    }
-    .project:hover {
-      text-decoration: underline;
-      cursor: pointer;
-      background: rgba(0,0,0,0.3);
-    }
-
-    h1 {
-      font-family: "IBM Plex Mono", monospace;
-    }
-
-    ::-moz-selection {
-      color: black;
-      background: #888;
-    }
-
-    ::selection {
-      color: black;
-      background: #888;
-    }
-
-    @keyframes slidein {
-      from {
-        transform: translateX(-4%);
-        opacity: 0;
+      body {
+        color: #bfd9c6;
+        font-family: "Sora", system-ui, -apple-system, "Segoe UI", Ubuntu,
+          Cantarell, sans-serif;
+        background: linear-gradient(180deg, #05120e 0%, #163d22 100%);
       }
 
-      to {
-        transform: translateX(0);
-        opacity: 1;
+      #card {
+        animation: slidein 0.4s ease-out forwards;
       }
-    }
-  </style>
-</head>
 
-<body class="text-black h-screen relative">
+      .content {
+        @media (width >= 64rem) {
+          opacity: 0;
+          animation: slidein 0.7s ease-out forwards;
+          animation-delay: 0.4s;
+        }
+      }
 
-  <div class="absolute bottom-0 right-0 z-[999] hidden m-3 mb-6 items-end lg:flex select-none">
-    <input type="checkbox" name="firefoxMode" id="firefoxMode" class="hidden">
-    <label for="firefoxMode" title="since the gradients look bad" class="cursor-pointer p-3 hover:outline rounded-md">
-      <span id="firefoxModeBtn" class="hidden opacity-0 mr-1 fa-solid fa-check transition duration-150"></span>
-      firefox mode
-    </label>
-  </div>
+      .project {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2px;
+        user-select: none;
+      }
+      .project:hover {
+        text-decoration: underline;
+        cursor: pointer;
+        background: rgba(0, 0, 0, 0.3);
+      }
 
-  <div class="flex justify-center items-center h-full">
-    <div id="card"
-      class="lg:w-[40%] lg:h-fit w-full h-full lg:cool-shadow p-12 lg:rounded-2xl outline-0 transition-transform duration-150">
-      <!--titles-->
-      <div class="content flex flex-row justify-between mb-6">
-        <div>
-          <h1 class="text-3xl mb-1">gabors0</h1>
-          <i class="text-sm">Gábor Simon</i>
-        </div>
-        <div class="mt-1.5 space-x-2">
+      h1 {
+        font-family: "IBM Plex Mono", monospace;
+      }
 
-          <div class="flex flex-col items-end space-y-1">
-            <div>
-              <a href="https://github.com/gabors0" target="_blank" aria-label="gitHub" title="github" class="pb-1">
-                <span class="fa-brands fa-github fa-xl hover:-translate-y-1 transition-transform duration-150"></span>
-              </a>
-              <a href="https://x.com/s5underscore5" target="_blank" aria-label="X (Twitter)" title="X (Twitter)"
-                class="pb-1">
-                <span class="fa-brands fa-x-twitter fa-xl hover:-translate-y-1 transition-transform duration-150"></span>
-              </a>
-              <a href="https://www.last.fm/user/gabors0" target="_blank" aria-label="last.fm" title="last.fm"
-                class="pb-1">
-                <span class="fa-brands fa-lastfm fa-xl hover:-translate-y-1 transition-transform duration-150"></span>
-              </a>
-            </div>
-            <div>
-              <a href="https://ko-fi.com/gabors0" target="_blank"
-                class="hover:underline transition-transform duration-150">ko-fi</a>
+      ::-moz-selection {
+        color: #05120e;
+        background: #bfd9c6;
+      }
+
+      ::selection {
+        color: #05120e;
+        background: #bfd9c6;
+      }
+
+      @keyframes slidein {
+        from {
+          transform: translateX(-4%);
+          opacity: 0;
+        }
+
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="text-black h-screen relative">
+    <div class="flex justify-center items-center h-full">
+      <div
+        id="card"
+        class="lg:w-[40%] lg:h-fit w-full h-full lg:cool-shadow p-12 lg:rounded-2xl transition-transform duration-150"
+      >
+        <!--titles-->
+        <div class="content flex flex-row justify-between mb-6">
+          <div class="flex flex-col space-y-1">
+            <h1 class="text-3xl">gabors0</h1>
+            <i class="opacity-50">he/him</i>
+          </div>
+          <div class="mt-1.5 space-x-2">
+            <div class="flex flex-col items-end space-y-1">
+              <div class="select-none">
+                <a
+                  href="https://github.com/gabors0"
+                  target="_blank"
+                  aria-label="gitHub"
+                  title="github"
+                  class="pb-1"
+                >
+                  <span
+                    class="fa-brands fa-github fa-xl hover:-translate-y-1 transition-transform duration-150"
+                  ></span>
+                </a>
+                <a
+                  href="https://x.com/s5underscore5"
+                  target="_blank"
+                  aria-label="X (Twitter)"
+                  title="X (Twitter)"
+                  class="pb-1"
+                >
+                  <span
+                    class="fa-brands fa-x-twitter fa-xl hover:-translate-y-1 transition-transform duration-150"
+                  ></span>
+                </a>
+                <a
+                  href="https://www.last.fm/user/gabors0"
+                  target="_blank"
+                  aria-label="last.fm"
+                  title="last.fm"
+                  class="pb-1"
+                >
+                  <span
+                    class="fa-brands fa-lastfm fa-xl hover:-translate-y-1 transition-transform duration-150"
+                  ></span>
+                </a>
+              </div>
+              <div>
+                <a
+                  href="https://ko-fi.com/gabors0"
+                  target="_blank"
+                  class="hover:underline transition-transform duration-150"
+                  >ko-fi</a
+                >
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <hr class="content" />
+        <hr class="content" />
 
-      <!--content-->
-      <div class="content mt-6">
-        <h2 class="text-xl">About</h2>
-        <ul class="pl-6 pt-3 list-disc">
-          <li>17</li>
-          <li>hungarian 🇭🇺</li>
-          <li><del>vibe coder</del></li>
-        </ul>
-      </div>
+        <!--content-->
+        <div class="content mt-6">
+          <h2 class="text-xl">About</h2>
+          <ul class="pl-6 pt-3 list-disc">
+            <li>17</li>
+            <li>hungarian 🇭🇺</li>
+          </ul>
+        </div>
 
-      <div class="content mt-6">
-        <h2 class="text-xl">Projects</h2>
-        <ul class="pt-3">
-          <a class="project not-lg:underline" href="https://github.com/gabors0/www" target="_blank">this<i>html</i></a>
-          <a class="project not-lg:underline" href="https://github.com/gabors0/video-upload-thing" target="_blank">video upload thing<i>js, html</i></a>
-          <p class="select-none">uhh...</p>
-        </ul>
+        <div class="content mt-6">
+          <h2 class="text-xl">Projects</h2>
+          <ul class="pt-3">
+            <a
+              class="project not-lg:underline"
+              href="https://github.com/gabors0/www"
+              target="_blank"
+              >this<i>html</i></a
+            >
+            <p class="select-none">uhh...</p>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- -->
-  <script src="https://kit.fontawesome.com/8df48b8ea3.js" crossorigin="anonymous"></script>
-  <script>
-    const firefoxMode = document.getElementById("firefoxMode");
-    const firefoxModeBtn = document.getElementById("firefoxModeBtn");
-    const body = document.body;
-    const card = document.getElementById("card");
-
-    firefoxMode.addEventListener("change", () => {
-      if (firefoxMode.checked) {
-        firefoxModeBtn.classList.add("opacity-100");
-        firefoxModeBtn.classList.remove("hidden");
-        firefoxModeBtn.classList.remove("opacity-0");
-
-        body.classList.remove("gradient");
-        body.classList.add("text-white");
-
-        card.classList.remove("outline");
-        card.classList.remove("lg:cool-shadow");
-        card.classList.add("outline-neutral-200");
-        card.classList.add("outline-2");
-
-        body.style.background = "#333";
-      } else {
-        firefoxModeBtn.classList.add("opacity-0");
-        firefoxModeBtn.classList.add("hidden");
-        firefoxModeBtn.classList.remove("opacity-100");
-
-        body.classList.add("gradient");
-        body.classList.remove("text-white");
-
-        card.classList.add("outline");
-        card.classList.add("lg:cool-shadow");
-        card.classList.remove("outline-neutral-200");
-        card.classList.remove("outline-2");
-
-        body.style.background = "";
-      }
-    });
-  </script>
-</body>
-
+    <!-- -->
+    <script
+      src="https://kit.fontawesome.com/8df48b8ea3.js"
+      crossorigin="anonymous"
+    ></script>
+    <script></script>
+  </body>
 </html>
