@@ -76,21 +76,13 @@
 
 <body class="text-black h-screen relative">
 
-  <div class="absolute bottom-0 right-0 z-[999] hidden m-3 mb-6 items-end lg:flex select-none">
-    <input type="checkbox" name="firefoxMode" id="firefoxMode" class="hidden">
-    <label for="firefoxMode" title="since the gradients look bad" class="cursor-pointer p-3 hover:outline rounded-md">
-      <span id="firefoxModeBtn" class="hidden opacity-0 mr-1 fa-solid fa-check transition duration-150"></span>
-      firefox mode
-    </label>
-  </div>
-
   <div class="flex justify-center items-center h-full">
     <div id="card"
       class="lg:w-[40%] lg:h-fit w-full h-full lg:cool-shadow p-12 lg:rounded-2xl outline-0 transition-transform duration-150">
       <!--titles-->
       <div class="content flex flex-row justify-between mb-6">
         <div>
-          <h1 class="text-3xl mb-1">gabors0</h1>
+          <h1 class="text-4xl align-middle">gabors0</h1>
         </div>
         <div class="mt-1.5 space-x-2">
 
@@ -137,48 +129,9 @@
       </div>
     </div>
   </div>
-
-  <!-- -->
   <script src="https://kit.fontawesome.com/8df48b8ea3.js" crossorigin="anonymous"></script>
-  <script>
-    const firefoxMode = document.getElementById("firefoxMode");
-    const firefoxModeBtn = document.getElementById("firefoxModeBtn");
-    const body = document.body;
-    const card = document.getElementById("card");
-
-    firefoxMode.addEventListener("change", () => {
-      if (firefoxMode.checked) {
-        firefoxModeBtn.classList.add("opacity-100");
-        firefoxModeBtn.classList.remove("hidden");
-        firefoxModeBtn.classList.remove("opacity-0");
-
-        body.classList.remove("gradient");
-        body.classList.add("text-white");
-
-        card.classList.remove("outline");
-        card.classList.remove("lg:cool-shadow");
-        card.classList.add("outline-neutral-200");
-        card.classList.add("outline-2");
-
-        body.style.background = "#333";
-      } else {
-        firefoxModeBtn.classList.add("opacity-0");
-        firefoxModeBtn.classList.add("hidden");
-        firefoxModeBtn.classList.remove("opacity-100");
-
-        body.classList.add("gradient");
-        body.classList.remove("text-white");
-
-        card.classList.add("outline");
-        card.classList.add("lg:cool-shadow");
-        card.classList.remove("outline-neutral-200");
-        card.classList.remove("outline-2");
-
-        body.style.background = "";
-      }
-    });
-  </script>
 </body>
 
 
 </html>
+
